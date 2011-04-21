@@ -2,12 +2,12 @@
 To let you walk through the code and understand it line by line.
 ----------------------------------------------------------------
 
-We are first take [app.js](https://github.com/samyakbhuta/playingAround-nowjs)
+We will first start with [app.js](https://github.com/samyakbhuta/playingAround-nowjs/blob/master/app.js)
 
 ```js
 var express = require("express");
 ```
-Loads the express module. [See] (https://github.com/samyakbhuta/playingAround-nowjs#L1)
+Loads the express module. [See] (https://github.com/samyakbhuta/playingAround-nowjs/blob/master/app.js#L1)
 
 
 ```js
