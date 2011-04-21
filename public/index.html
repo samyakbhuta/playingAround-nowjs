@@ -1,0 +1,38 @@
+<html>
+<head>
+<script src="nowjs/now.js"></script>
+<script type="text/javascript">
+
+var nowjsRelatedProcessing = function (){
+		/*
+		Yes, we do have lot's of things to do as soon as client is ready.
+		But, first what we would do is to tell server that client is ready on this side of the connection
+		So that server can invoke the function it wants invoke.
+		//now.clientSideReadyToProcess();		
+		Same thing could be achieved by writing follwing line at the serverside.
+			everyone.connected(someFunc);
+		*/ 
+
+		/*
+		Rest of the code is, basically, what client wants to do after now.js is ready.
+		Mostly, it is invoking functions defined on the server side.			
+		*/
+		document.write(now.someServelLevelGlobalConfigBlahBlah.appName +"<br/>");
+		var displayMessageFromServer = function (data) {	
+			document.write(data + "<br/>");
+		}
+		now.sayHiFromServer(displayMessageFromServer);
+}
+
+now.ready(nowjsRelatedProcessing);
+now.invokeAlertOnClient = function(data){
+	alert ("Alert which was invoked from server side.");
+}
+
+
+
+</script>
+</head>
+<body>
+</body>
+</html>
